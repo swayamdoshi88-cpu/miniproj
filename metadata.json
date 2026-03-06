@@ -1,0 +1,7 @@
+{
+  "name": "Veritas AI - Lie Detector",
+  "description": "A sophisticated AI-powered deception detection system that analyzes voice patterns, sentiment, and psycholinguistic markers to estimate the probability of truthfulness.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
