@@ -1,4 +1,16 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// Use the exact VITE_ prefix to pull the key from AWS
+const apiKey = import.meta.env.VITE_API_KEY; 
+
+if (!apiKey) {
+  throw "API_KEY environment variable not set"; 
+}
+
+const genAI = new GoogleGenerativeAI(apiKey);
+const ai = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+// ... the rest of your Veritas AI functions below ...
 export function encodeToBase64(bytes: Uint8Array): string {
   let binary = '';
   const len = bytes.byteLength;
